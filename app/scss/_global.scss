@@ -1,0 +1,72 @@
+html,
+body{
+    height: 100%;
+}
+body{
+    font-size: 16px;
+    // line-height: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $black;
+    @extend %mr;
+    background-color: $default;
+}
+.main{
+    flex-grow: 1;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+.border{
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    background-image: linear-gradient(135deg, rebeccapurple, crimson);
+    position: relative;
+    *{
+      position: relative;
+      z-index: 1;
+    }
+    &__wrap{
+      display: block;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px rgba(black, 0.4);
+        overflow: hidden;
+        background-color: #fff;
+        // background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          transform: rotate(-45deg);
+          transition: all .4s ease-in;
+        }
+    }
+  }
+  .stars{
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../images/reiting.svg') center/auto 100% no-repeat;
+    font-size: 0;
+    width: 160px;
+    height: 26px;
+    line-height: 1;
+    background-position: 0px 0;
+    margin-right: 8px;
+  }
+
+  .row-f{
+    display: flex;
+    justify-content: center;
+  }
+
+  

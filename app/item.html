@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast flowers</title>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+
+  <body >
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <a href="#" class="header__logo">
+            <img src="images/logo.png" alt="logo" />
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" class="menu__link ">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="catalog.html" class="menu__link ">Каталог</a>
+              </li>
+              <li class="menu__item">
+                <a href="item.html" class="menu__link menu__link--active">Item</a>
+              </li>
+            </ul>
+          </nav>
+  
+  
+          <div class="header__modal">
+            <div class="content">
+              <button class="modal-btn cart__btn" data-path="cart" data-animation="fadeInUp" data-speed="700"><svg
+                  class="">
+                  <use xlink:href="images/sprite.svg#cart"></use>
+                </svg>
+                <span class="cart__btn__count none"></span></button>
+              <button class="modal-btn " data-path="regist" data-animation="fadeInUp" data-speed="700"><svg class="">
+                  <use xlink:href="images/sprite.svg#login"></use>
+                </svg>
+              </button>
+              <button class="menu__btn">
+                <span class="menu__sticks"></span>
+                <ul class="menu-nav">
+                </button>
+            </div>
+            <div class="modal">
+              <div class="modal__container modal__container-cart" data-target="cart">
+                <h2 class="cart__title">Корзина товаров</h2>
+                <p class="cart__text">Ваша корзина пуста, добавьте в неё что-нибудь</p>
+                
+                <div class="cart__inner">
+                  <div class="cart__left">
+                    <div class="cart-wrap">
+                    </div>
+                  </div>
+                  <div class="cart__right none">
+                    <div class="cart__input">
+                      <div class="cart__input__box">
+                        <img src="images/chip.png" alt="cart-img" class="cart__img">
+                        <img src="images/visa.png" alt="cart-img" class="cart__img">
+                      </div>
+                      <input type="number" class="cart__input__num" placeholder="Номер карты">
+                      <div class="cart__input__box">
+                        <input type="text" class="cart__name" placeholder="Владелец карты">
+                        <input type="text" maxlength="2" class="cart__data" placeholder="ММ">
+                        <input type="text" maxlength="2" placeholder="ГГ" class="cart__data">
+                      </div>
+                    </div>
+  
+                    <div class="cart__info-box">
+                      <p class="cart__info"> Стоимость товара(-ов) </p>
+                      <div class="cart__info-wrap">
+                        <p class="cart__price"> </p>
+                        <span>₽</span>
+                      </div>
+                    </div>
+                    <div class="cart__info-box">
+                      <p class="cart__info">Доставка </p>
+                      <div class="cart__info-wrap">
+                        <p class="cart__delivery-price">300 </p>
+                        <span>₽</span>
+                      </div>
+                    </div>
+  
+                    <div class="cart__price-box">
+                      <button type="submit" class="cart__btn special__link">Оформить заказ</button> 
+                      <div class="cart__info-wrap">
+                        <p class="cart__full-price"> </p>
+                        <span>₽</span>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+  
+                
+              </div>
+  
+              <div class="modal__container" data-target="regist">
+  
+                <div class="modal-content">
+                  <div class="form-structor">
+                    <div class="signup">
+                      <h2 class="form-title" id="signup">Регистрация</h2>
+                      <form class="login__form">
+                        <input type="text" class="login__input" placeholder="Имя">
+                        <input type="email" class="login__input" placeholder="Почта">
+                        <input type="password" class="login__input" placeholder="Пароль">
+                        <button type="submit" class="login__btn">Создать</button>
+                      </form>
+                    </div>
+                    <div class="login slide-up">
+                      <div class="center">
+                        <h2 class="form-title" id="login">Войти</h2>
+                        <form class="login__form">
+                          <input type="email" class="login__input" placeholder="Почта">
+                          <input type="password" class="login__input" placeholder="Пароль">
+                          <button type="submit" class="login__btn">Войти</button>
+                        </form>
+                        <p class="login__text">Или войдите через</p>
+                        <ul class="login-social__list">
+                          <li class="login-social__item"><svg class="">
+                              <use xlink:href="images/sprite.svg#ya"></use>
+                            </svg>
+                          </li>
+                          <li class="login-social__item"><svg class="">
+                              <use xlink:href="images/sprite.svg#g"></use>
+                            </svg>
+                          </li>
+                          <li class="login-social__item"><svg class="">
+                              <use xlink:href="images/sprite.svg#vk"></use>
+                            </svg>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header> 
+
+
+    <main>
+
+     <section class="product">
+      <div class="container">
+       
+        <div class="product__wrap">
+          
+          <div class="product-slider">
+            
+            <div class="swiper product-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product-slide">
+                 <img src="images/product.jpg" alt="product">
+                </div>
+                <div class="swiper-slide product-slide">
+                  <img src="images/product2.jpg" alt="product">
+                </div>
+                <div class="swiper-slide product-slide">
+                  <img src="images/product3.jpg" alt="product">
+                </div>         
+              </div>
+
+              <div class="swiper-button-prev">
+                <svg class="">
+                  <use xlink:href="images/sprite.svg#slider-ar"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg class="">
+                  <use xlink:href="images/sprite.svg#slider-ar"></use>
+                </svg>
+              </div>
+            </div>
+            
+          </div>
+          <div class="product-info">
+            <h2 class="product__title">Рубиновые искры</h2>
+            <h3 class="product__subtitle product__subtitle-o">Описание</h3>
+            <p class="product__text">Завораживающая глубина ваших чувств передана огненными красками этого букета</p>
+            <h3 class="product__subtitle product__subtitle-c">Состав</h3>
+            <ul class="product-info__list">
+              <li>Гвоздика (Диантус)<span>5 шт</span></li>
+              <li>Леукодендрон<span>2 шт</span></li>
+              <li>Леукоспермум (Нутан)<span>3 шт</span></li>
+              <li>Лотос<span>1 шт</span></li>
+              <li>Роза<span>2 шт</span></li>
+            </ul>
+            <h3 class="product-info__delivery">Доставим уже <span>сегодня</span></h3>
+            <div class="product-info__buttons">
+
+              <div class="shop__quantity">
+                <div class="shop__control control__btn" data-action="minus">-</div>
+                <div class="shop__control" data-counter>1</div>
+                <div class="shop__control control__btn" data-action="plus">+</div>
+              </div>
+              
+
+
+
+              <button class="product__btn special__link">Заказать</button>
+            </div>
+            <div class="product__price-box">
+              <div class="product__price">
+                <h2 class="product__price-old">1500 ₽</h2>
+                <h2 class="product__price-new">1200 ₽</h2>
+              </div>
+              <div class="product__sber">
+                <img src="images/sber.png" alt="sber">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="product-slider__review">
+         
+          <div class="stars"></div>
+          <a href="#" class="product-slider__review__link">322 отзывa</a>
+        </div>
+        <div class="reviews__box">
+          <ul class="reviews__list">
+
+
+            <li class="reviews__item">
+              <div class="reviews__item__header">
+                <img src="images/zena.jpg" alt="user ava" class="reviews__avatar">
+                <div class="reviews__item__warap">
+                  <h3 class="reviews__item__name">Зена - королева воинов</h3>
+                  <p class="reviews__item__date">14 февраля 2022г</p>
+                  <div class="stars reviews__stars-1"></div>
+                </div>
+              </div>
+              <p class="reviews__comment">Хочу поблагодарить команду Fast flovers за качество, за оперативность и за ответственность! Молодцы! Доставили вовремя, букет шикарный, курьеры вежливые! Всё на высоком уровне и качестве!!! Заказывал не в первый раз и планирую в дальнейшем пользоваться услугами Fast flovers. Рекомендую всем! Не пожалеете!!! Ещё раз большое Вам спасибо!</p>
+            </li>
+
+            <li class="reviews__item">
+              <div class="reviews__item__header">
+                <img src="images/ivi.jpg" alt="user ava" class="reviews__avatar">
+                <div class="reviews__item__warap">
+                  <h3 class="reviews__item__name">Ядовитый Плющ</h3>
+                  <p class="reviews__item__date">26 февраля 2022г</p>
+                  <div class="stars reviews__stars-1"></div>
+                </div>
+              </div>
+              <p class="reviews__comment">Периодически заказываю здесь цветы и прочие мелочи, очень нравится качество товаров и доставки, всем советую</p>
+            </li>
+            <li class="reviews__item">
+              <div class="reviews__item__header">
+                <img src="images/naruto.jpg" alt="user ava" class="reviews__avatar">
+                <div class="reviews__item__warap">
+                  <h3 class="reviews__item__name">Наруто Узумаки</h3>
+                  <p class="reviews__item__date">8 марта 2022г</p>
+                  <div class="stars reviews__stars-2"></div>
+                </div>
+              </div>
+              <p class="reviews__comment">Супер! Заказ доставлен вовремя!</p>
+            </li>
+
+          </ul>
+          <div class="reviews__stat ">
+            <div class="reviews__stat__wrap">
+              <div class="reviews__stat__info">
+                <p class="reviews__stat__ball">4.8</p>
+                <p class="reviews__stat__text"> На основании 322 отзывов</p>
+                <div class="stars reviews__star"></div>
+              </div>
+              <div class="reviews__stat__box">
+               
+                <div class="reviews__stat__item">
+                  <p class="reviews__stat__num">5</p>
+                  <div class="reviews__stat__bar"><span style="width: 80%;"></span></div>
+                  <p class="reviews__stat__persent">71%</p>
+                </div>
+                <div class="reviews__stat__item">
+                  <p class="reviews__stat__num">4</p>
+                  <div class="reviews__stat__bar"><span style="width: 32%;"></span></div>
+                  <p class="reviews__stat__persent">16%</p>
+                </div>
+                <div class="reviews__stat__item">
+                  <p class="reviews__stat__num">3</p>
+                  <div class="reviews__stat__bar"><span style="width: 16%;"></span></div>
+                  <p class="reviews__stat__persent">7%</p>
+                </div>
+                <div class="reviews__stat__item">
+                  <p class="reviews__stat__num">2</p>
+                  <div class="reviews__stat__bar"><span style="width: 8%;"></span></div>
+                  <p class="reviews__stat__persent">3%</p>
+                </div><div class="reviews__stat__item">
+                  <p class="reviews__stat__num">1</p>
+                  <div class="reviews__stat__bar"><span style="width: 8%;"></span></div>
+                  <p class="reviews__stat__persent">3%</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    <section class="recomend">
+      <div class="container">
+        <h2 class="recomend__title">Похожие товары</h2>
+        <div class="swiper recomend-slider">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+                <div class="sale__bot__banner">New</div>
+                <img src="images/sale/sale1.png" alt="sale img" />
+                <h3 class="sale__bot__name">Подарок судьбы</h3>
+                <div class="sale__bot__info">
+                  <div href="#" class="sale__bot__btn">₽</div>
+                  <p class="sale__bot__price">2300 ₽</p>
+                  <label class="check sale__bot__btn sale__bot__btn-cart">
+                    <input type="checkbox" class="check__input ">
+                    
+                    <span class="check__box-slider">
+                      <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                      </svg>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <img src="images/sale/sale2.png" alt="sale img" />
+              <h3 class="sale__bot__name">Счастливый день</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">1800 ₽</p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <div class="sale__bot__banner sale__bot__banner-sale">
+                Sale
+              </div>
+              <img src="images/sale/sale3.png" alt="sale img" />
+              <h3 class="sale__bot__name">Небесная соната</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">
+                  3000 ₽<br />
+                  <span>3500 ₽</span>
+                </p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <div class="sale__bot__banner sale__bot__banner-sale">
+                Sale
+              </div>
+              <img src="images/sale/sale4.png" alt="sale img" />
+              <h3 class="sale__bot__name">Аромат солнца</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">
+                  2000 ₽<br />
+                  <span>2300 ₽</span>
+                </p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <img src="images/sale/sale5.png" alt="sale img" />
+              <h3 class="sale__bot__name">Букет невесты</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">2400 ₽</p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <div class="sale__bot__banner">New</div>
+              <img src="images/sale/sale6.png" alt="sale img" />
+              <h3 class="sale__bot__name">Цветочный домик</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">3300 ₽</p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <div class="sale__bot__banner">New</div>
+              <img src="images/sale/sale7.png" alt="sale img" />
+              <h3 class="sale__bot__name">Букет №7</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">2000 ₽</p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="sale__item">
+              <div class="sale__bot__banner sale__bot__banner-sale">
+                Sale
+              </div>
+              <img src="images/sale/sale8.png" alt="sale img" />
+              <h3 class="sale__bot__name">Летние посиделки</h3>
+              <div class="sale__bot__info">
+                <div class="sale__bot__btn">₽</div>
+                <p class="sale__bot__price">
+                  4000 ₽<br />
+                  <span>6000 ₽</span>
+                </p>
+                <label class="check sale__bot__btn sale__bot__btn-cart">
+                  <input type="checkbox" class="check__input ">
+                  
+                  <span class="check__box-slider">
+                    <svg class="">
+                    <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="swiper-button-prev">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#slider-ar"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#slider-ar"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__content">
+          <div class="footer__nav">
+            <h4 class="footer__title">О компании</h4>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Вакансии</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Шоурум</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Как сделать заказ</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Пользовательское соглашение</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <h4 class="footer__title">Покупателям</h4>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Акции</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Распродажа</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Доставка</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Оплата</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__nav">
+            <h4 class="footer__title">Скидки и новости</h4>
+            <p class="footer__text">
+              Подпишитесь на e-mail рассылку, чтобы получать информацию о наших
+              самых выгодных предложениях
+            </p>
+            <form class="footer__form" action="#">
+              <input
+                class="footer__input"
+                type="text"
+                placeholder="Ваш email"
+              />
+              <button class="footer__btn">
+                <svg class="">
+                  <use xlink:href="images/sprite.svg#check"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link-icon telegram"
+              ><svg class="footer__icon i-telegram">
+                <use xlink:href="images/sprite.svg#telegram"></use></svg
+              ><span class="tooltip">telegram</span></a
+            >
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link-icon vk"
+              ><svg class="footer__icon i-vk">
+                <use xlink:href="images/sprite.svg#vk"></use></svg
+              ><span class="tooltip">vk</span></a
+            >
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link-icon pinterest"
+              ><svg class="footer__icon i-pinterest">
+                <use xlink:href="images/sprite.svg#pinterest"></use></svg
+              ><span class="tooltip">pinterest</span></a
+            >
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link-icon instagram"
+              ><svg class="footer__icon i-insta">
+                <use xlink:href="images/sprite.svg#instagram"></use></svg
+              ><span class="tooltip">instagram</span></a
+            >
+          </li>
+        </ul>
+
+        <div class="footer__bot">
+          <p class="footer__copy">© 2021. All Rights Reserved.</p>
+          <div class="footer__accept">
+            <p class="footer__accept-text">Мы принимаем:</p>
+            <img src="images/accept.png" alt="accept-img" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    <script src="swiper/swiper-bundle.js"></script>
+    <script src="js/basket.js"></script>
+     <script src="js/modal.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

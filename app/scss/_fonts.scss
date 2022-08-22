@@ -1,0 +1,51 @@
+@font-face{
+ font-family: 'Merriweather-Regular';
+ src: local('Merriweather-Regular'),
+         url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+         url('../fonts/Merriweather-Regular.woff') format('woff');      
+ font-weight: 400;
+ font-style: normal;
+ font-display: swap;
+}
+
+@font-face{
+ font-family: 'Merriweather-Italic';
+ src: local('Merriweather-Italic'),
+         url('../fonts/Merriweather-Italic.woff2') format('woff2'),
+         url('../fonts/Merriweather-Italic.woff') format('woff');      
+ font-weight: 400;
+ font-style: italic;
+ font-display: swap;
+}
+
+@font-face{
+ font-family: 'Merriweather-BoldItalic';
+ src: local('Merriweather-BoldItalic'),
+         url('../fonts/Merriweather-BoldItalic.woff2') format('woff2'),
+         url('../fonts/Merriweather-BoldItalic.woff') format('woff');      
+ font-weight: 700;
+ font-style: italic;
+ font-display: swap;
+}
+
+@font-face{
+ font-family: 'AlegreyaSans-MediumItalic';
+ src: local('AlegreyaSans-MediumItalic'),
+         url('../fonts/AlegreyaSans-MediumItalic.woff2') format('woff2'),
+         url('../fonts/AlegreyaSans-MediumItalic.woff') format('woff');      
+ font-weight: 500;
+ font-style: italic;
+ font-display: swap;
+}
+
+
+
+@font-face{
+        font-family: 'Arimo-MediumItalic';
+        src: local('Arimo-MediumItalic'),
+                url('../fonts/Arimo-MediumItalic.woff2') format('woff2'),
+                url('../fonts/Arimo-MediumItalic.woff') format('woff');      
+        font-weight: 500;
+        font-style: italic;
+        font-display: swap;
+       }
