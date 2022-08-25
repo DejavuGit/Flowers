@@ -36,7 +36,13 @@ function styles (){
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'app/swiper/swiper-bundle.js',
+       
+        'app/js/nouislider.js',
+        'app/js/range-slider.js',
+        'app/js/simplebar.js',
+        'app/js/total-price.js',
+        'app/js/basket.js',
+        'app/js/modal.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -77,6 +83,8 @@ function build() {
     return src([
         'app/**/*.html',
         'app/css/style.min.css',
+
+        'app/swiper/swiper-bundle.js',
         'app/js/main.min.js'
     ], {base: 'app'})
     .pipe(dest('dist'))
@@ -102,7 +110,7 @@ exports.svgSprites = svgSprites;
 exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist,images,build);
-// exports.build = series(cleanDist,build);
+
 
 
 
