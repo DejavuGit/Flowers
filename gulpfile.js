@@ -83,6 +83,8 @@ function build() {
     return src([
         'app/**/*.html',
         'app/css/style.min.css',
+        'app/fonts/**.**',
+        'app/favicon/**.**',
 
         'app/swiper/swiper-bundle.js',
         'app/js/main.min.js'
